@@ -11,6 +11,8 @@ spec:
     repoURL: https://github.com/Inx51/kubernetes-full-ci-cd.git  # Can point to either a Helm chart repo or a git repo.
     targetRevision: HEAD  # For Helm, this refers to the chart version.
     path: .
+    directory:
+      recurse: true
   
   destination:
     server: https://kubernetes.default.svc
