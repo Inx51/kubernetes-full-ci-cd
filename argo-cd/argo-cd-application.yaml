@@ -16,7 +16,7 @@ spec:
   
   destination:
     server: https://kubernetes.default.svc
-    namespace: demo
+    namespace: argocd
   # Extra information to show in the Argo CD Application details tab
   # info:
   #   - name: 'Example:'
