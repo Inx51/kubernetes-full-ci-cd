@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: argocd-projs
+  name: argocd
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -13,6 +13,3 @@ spec:
   - namespace: argocd
     server: https://kubernetes.default.svc
     name: in-clusters
-  - namespace: demoapp
-    server: https://kubernetes.default.svc
-    name: in-cluster

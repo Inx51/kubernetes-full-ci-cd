@@ -1,19 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argocd-apps
+  name: argocd
   namespace: argocd
   labels:
     name: argocd
 spec:
-  project: argocd-projs
+  project: argocd
   source:
     repoURL: https://github.com/Inx51/kubernetes-full-ci-cd.git  # Can point to either a Helm chart repo or a git repo.
     targetRevision: HEAD  # For Helm, this refers to the chart version.
-    path: .
+    path: /argo-cd
     directory:
       recurse: true
-      exclude: Kustomization.yaml
   
   destination:
     server: https://kubernetes.default.svc
