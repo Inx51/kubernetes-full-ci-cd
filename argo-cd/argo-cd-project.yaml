@@ -13,3 +13,6 @@ spec:
   - namespace: argocd
     server: https://kubernetes.default.svc
     name: in-cluster
+  - namespace: demo
+    server: https://kubernetes.default.svc
+    name: in-cluster
