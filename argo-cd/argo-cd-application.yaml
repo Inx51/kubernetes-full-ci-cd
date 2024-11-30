@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argocd-test
+  name: argocd-apps
   namespace: argocd
   labels:
     name: argocd
@@ -23,7 +23,7 @@ spec:
   #     value: 'https://example.com'
 
   # Sync policy
-  syncPolicy:
+  # syncPolicy:
     # retry:
     #   limit: 5 # number of failed sync attempt retries; unlimited number of attempts if less than 0
     #   backoff:
