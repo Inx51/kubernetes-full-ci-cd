@@ -13,6 +13,7 @@ spec:
     path: .
     directory:
       recurse: true
+      exclude: Kustomization.yaml
   
   destination:
     server: https://kubernetes.default.svc
