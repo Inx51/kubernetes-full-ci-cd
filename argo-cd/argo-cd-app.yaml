@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/Inx51/kubernetes-full-ci-cd.git  # Can point to either a Helm chart repo or a git repo.
     targetRevision: HEAD  # For Helm, this refers to the chart version.
-    path: /argo-cd
+    path: ./argo-cd
     directory:
       recurse: true
   
