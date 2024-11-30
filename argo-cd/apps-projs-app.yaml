@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: proj-apps
+  name: apps-projs
   namespace: argocd
   labels:
-    name: proj-apps
+    name: apps-projs
 spec:
-  project: apps
+  project: apps-projs
   source:
     repoURL: https://github.com/Inx51/kubernetes-full-ci-cd.git  # Can point to either a Helm chart repo or a git repo.
     targetRevision: HEAD  # For Helm, this refers to the chart version.
-    path: ./app-projs
+    path: ./apps-projs
     directory:
       recurse: true
   
