@@ -14,9 +14,11 @@ spec:
     directory:
       recurse: true
   
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: argocd
+  destinations:
+    - server: https://kubernetes.default.svc
+      namespace: argocd
+    - server: https://kubernetes.default.svc
+      namespace: demo-app
   # Extra information to show in the Argo CD Application details tab
   # info:
   #   - name: 'Example:'
