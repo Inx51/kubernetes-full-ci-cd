@@ -13,3 +13,6 @@ spec:
   - namespace: apps-projs
     server: https://kubernetes.default.svc
     name: in-clusters
+  - namespace: argocd
+    server: https://kubernetes.default.svc
+    name: in-clusters
