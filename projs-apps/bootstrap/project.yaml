@@ -1,15 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: apps-projs
+  name: bootstrap
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  description: ArgoCD managed applications
+  description: Bootstrap project (App of apps)
   sourceRepos:
-  - 'https://github.com/Inx51/*'
+  - '*'
   destinations:
-  - namespace: apps-projs
+  - namespace: '*'
     server: https://kubernetes.default.svc
-    name: in-clusters
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  namespaceResourceWhitelist:
+  - group: '*'
+    kind: '*'
